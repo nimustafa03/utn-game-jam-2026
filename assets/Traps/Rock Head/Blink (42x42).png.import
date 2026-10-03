@@ -3,21 +3,23 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ctsv0yhhw5u2j"
-path="res://.godot/imported/Blink (42x42).png-37bfaed6ed05e39ffbc8eb5803420b7f.ctex"
+path="res://.godot/imported/Blink (42x42).png-5d8660bf082da514fee25c515e8214ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/placeholder/Traps/Rock Head/Blink (42x42).png"
-dest_files=["res://.godot/imported/Blink (42x42).png-37bfaed6ed05e39ffbc8eb5803420b7f.ctex"]
+source_file="res://assets/Traps/Rock Head/Blink (42x42).png"
+dest_files=["res://.godot/imported/Blink (42x42).png-5d8660bf082da514fee25c515e8214ec.ctex"]
 
 [params]
 
 compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
@@ -25,6 +27,10 @@ mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

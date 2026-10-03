@@ -3,21 +3,23 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://nbi81x4g7plq"
-path="res://.godot/imported/Hit (32x32).png-14a887b6b6b24ecd049940eb41764c03.ctex"
+path="res://.godot/imported/Hit (32x32).png-4f511c8882202a91348b0cd4da0329e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/placeholder/Main Characters/Mask Dude/Hit (32x32).png"
-dest_files=["res://.godot/imported/Hit (32x32).png-14a887b6b6b24ecd049940eb41764c03.ctex"]
+source_file="res://assets/Main Characters/Mask Dude/Hit (32x32).png"
+dest_files=["res://.godot/imported/Hit (32x32).png-4f511c8882202a91348b0cd4da0329e0.ctex"]
 
 [params]
 
 compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
@@ -25,6 +27,10 @@ mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
