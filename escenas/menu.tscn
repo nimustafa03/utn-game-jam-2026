@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d02erwua17rxg"]
 
-[ext_resource type="Script" uid="uid://bjwdaiffb1m7o" path="res://scripts/menu.gd" id="1_d7r87"]
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_d7r87"]
 [ext_resource type="Texture2D" uid="uid://um8fm8myqthm" path="res://imagen/Imagen de ChatGPT 3 oct 2026, 14_54_06.png" id="2_2owot"]
 [ext_resource type="AudioStream" uid="uid://dmiiyebyt2ye4" path="res://musica/menu.mp3" id="3_2owot"]
 [ext_resource type="Texture2D" uid="uid://clpn4jbat03y6" path="res://imagen/d46bbbc1-d0f1-4f4f-8b1e-40db938dd4e6 (1).png" id="4_6cq3m"]
@@ -35,33 +35,6 @@ offset_bottom = 647.0
 texture = ExtResource("2_2owot")
 expand_mode = 1
 script = SubResource("GDScript_6cq3m")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect" unique_id=1496982287]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 84.0
-offset_top = -256.0
-offset_right = 375.0
-offset_bottom = -76.0
-grow_vertical = 0
-theme_override_constants/separation = 15
-
-[node name="play" type="Button" parent="ColorRect/VBoxContainer" unique_id=909904381]
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "JUGAR"
-
-[node name="opciones" type="Button" parent="ColorRect/VBoxContainer" unique_id=1738723419]
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "OPCIONES"
-
-[node name="salir" type="Button" parent="ColorRect/VBoxContainer" unique_id=724505192]
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "SALIR"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2054136331]
 stream = ExtResource("3_2owot")
@@ -116,6 +89,33 @@ angle_max = 360.0
 scale_amount_min = 0.01
 scale_amount_max = 0.02
 
-[connection signal="pressed" from="ColorRect/VBoxContainer/play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="ColorRect/VBoxContainer/opciones" to="." method="_on_opciones_pressed"]
-[connection signal="pressed" from="ColorRect/VBoxContainer/salir" to="." method="_on_salir_pressed"]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1496982287]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 84.0
+offset_top = -256.0
+offset_right = 375.0
+offset_bottom = -76.0
+grow_vertical = 0
+theme_override_constants/separation = 15
+
+[node name="play" type="Button" parent="VBoxContainer" unique_id=909904381]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "JUGAR"
+
+[node name="opciones" type="Button" parent="VBoxContainer" unique_id=1738723419]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "OPCIONES"
+
+[node name="salir" type="Button" parent="VBoxContainer" unique_id=724505192]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "SALIR"
+
+[connection signal="pressed" from="VBoxContainer/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/opciones" to="." method="_on_opciones_pressed"]
+[connection signal="pressed" from="VBoxContainer/salir" to="." method="_on_salir_pressed"]
