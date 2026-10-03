@@ -1,33 +1,54 @@
 [gd_scene format=3 uid="uid://omedo3fbd8q8"]
 
 [ext_resource type="Script" uid="uid://c68w27ug6moy4" path="res://scripts/player/player.gd" id="1_8afob"]
+[ext_resource type="Texture2D" uid="uid://dbarbl81kwkqr" path="res://assets/final/main character/rodar/rodar_derecha_01.png" id="2_0owmy"]
 [ext_resource type="Script" uid="uid://f2f8un86mfkg" path="res://scripts/state_machine/state_machine.gd" id="2_75vfm"]
 [ext_resource type="Script" uid="uid://bfahbrfogjdvv" path="res://scripts/player/states/idle.gd" id="3_0owmy"]
 [ext_resource type="Script" uid="uid://cu1s8v6t5gj02" path="res://scripts/player/states/walk.gd" id="4_qek5x"]
 [ext_resource type="Script" uid="uid://dqox2ah13m7gj" path="res://scripts/player/states/jump.gd" id="5_5gtgg"]
 [ext_resource type="Script" uid="uid://c88fixbwvy2cj" path="res://scripts/player/states/fall.gd" id="6_h17s1"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dovo2"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_qek5x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0owmy")
+}],
+"loop": true,
+"name": &"player_idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5gtgg"]
+radius = 8.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1359619575]
 script = ExtResource("1_8afob")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1634576988]
+position = Vector2(0, -1)
+scale = Vector2(0.06250001, 0.06250001)
+sprite_frames = SubResource("SpriteFrames_qek5x")
+animation = &"player_idle"
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=671644245]
-shape = SubResource("RectangleShape2D_dovo2")
+shape = SubResource("CircleShape2D_5gtgg")
 
 [node name="StateMachine" type="Node" parent="." unique_id=1469355314]
 script = ExtResource("2_75vfm")
 
 [node name="Idle" type="Node" parent="StateMachine" unique_id=1315291513]
 script = ExtResource("3_0owmy")
+ANIMATION_NAME = "player_idle"
 
 [node name="walk" type="Node" parent="StateMachine" unique_id=2418480]
 script = ExtResource("4_qek5x")
+ANIMATION_NAME = "player_walk"
 
 [node name="Jump" type="Node" parent="StateMachine" unique_id=374939847]
 script = ExtResource("5_5gtgg")
+ANIMATION_NAME = "player_jump"
 
 [node name="Fall" type="Node" parent="StateMachine" unique_id=1919776162]
 script = ExtResource("6_h17s1")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1634576988]
+ANIMATION_NAME = "player_fall"
