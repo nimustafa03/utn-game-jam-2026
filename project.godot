@@ -25,6 +25,9 @@ ui_restart_level={
 [layer_names]
 
 2d_physics/layer_1="Player"
+2d_physics/layer_2="Enemy"
+2d_physics/layer_3="Triggers"
+2d_physics/layer_5="Collisions"
 
 [rendering]
 

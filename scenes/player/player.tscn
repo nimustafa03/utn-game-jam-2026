@@ -109,13 +109,14 @@ animations = [{
 radius = 27.073973
 
 [node name="Player" type="CharacterBody2D" unique_id=1359619575]
+collision_mask = 16
 script = ExtResource("1_8afob")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1634576988]
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_75vfm")
 animation = &"player_fall"
-frame_progress = 0.8664944
+frame_progress = 0.1865449
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=671644245]
 shape = SubResource("CircleShape2D_0owmy")

@@ -1,0 +1,136 @@
+[gd_scene format=3 uid="uid://c8xe8voifmyga"]
+
+[ext_resource type="Texture2D" uid="uid://b538khbpn3dff" path="res://assets/final/mapas/tower_center.png" id="1_67omq"]
+[ext_resource type="PackedScene" uid="uid://omedo3fbd8q8" path="res://scenes/player/player.tscn" id="1_ecpkq"]
+[ext_resource type="Texture2D" uid="uid://cbf7bqi8j4dgm" path="res://assets/final/mapas/tower_top.png" id="2_qabiv"]
+[ext_resource type="Texture2D" uid="uid://bigo1o0c5p7e3" path="res://assets/final/mapas/Primer_nivel_-_Arbol_derecha.png" id="5_yllob"]
+[ext_resource type="Texture2D" uid="uid://dbk8flai8fy3u" path="res://assets/final/mapas/Primer_nivel_-_Arbol_izq.png" id="6_xrppn"]
+[ext_resource type="Texture2D" uid="uid://d1usstcpsuk1y" path="res://assets/placeholders/Background/Green.png" id="7_xrppn"]
+[ext_resource type="PackedScene" uid="uid://cq8g3h6wd1r0a" path="res://scenes/obstaculos/enemigos/flying_enemy.tscn" id="8_4ypuw"]
+[ext_resource type="PackedScene" uid="uid://dbytibvod7xdp" path="res://scenes/obstaculos/ramas/rama1.tscn" id="8_afvyn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_puj6c"]
+size = Vector2(97, 3062.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_afvyn"]
+size = Vector2(2666, 20)
+
+[node name="Level1" type="Node2D" unique_id=274241641]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1996100526]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1414638598]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=696653612]
+position = Vector2(450, 442)
+motion_scale = Vector2(0.7, 0.7)
+
+[node name="TowerCenter" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1415567669]
+position = Vector2(-362.06888, -1660.7454)
+scale = Vector2(0.3563074, 0.3563074)
+texture = ExtResource("1_67omq")
+
+[node name="TowerCenter2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=177385478]
+position = Vector2(-361.7126, -1201.4651)
+scale = Vector2(0.3563074, 0.3563074)
+texture = ExtResource("1_67omq")
+
+[node name="TowerCenter3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1830099947]
+position = Vector2(-360.99997, -727.22)
+scale = Vector2(0.3563074, 0.3563074)
+texture = ExtResource("1_67omq")
+
+[node name="TowerCenter4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=584252262]
+position = Vector2(-360.99997, -253.6875)
+scale = Vector2(0.3563074, 0.3563074)
+texture = ExtResource("1_67omq")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1470046201]
+position = Vector2(450, 442)
+motion_scale = Vector2(0.7, 0.7)
+
+[node name="TowerTop" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2" unique_id=370717251]
+position = Vector2(-364.56305, -2237.2507)
+scale = Vector2(0.3563074, 0.3563074)
+texture = ExtResource("2_qabiv")
+
+[node name="Background" type="Node2D" parent="." unique_id=951805280]
+
+[node name="Tower" type="Node2D" parent="Background" unique_id=1590291584]
+position = Vector2(-360.99997, -1338.9998)
+scale = Vector2(0.3563074, 0.3563074)
+
+[node name="Player" parent="." unique_id=1359619575 instance=ExtResource("1_ecpkq")]
+position = Vector2(0, -3486)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1476838016]
+limit_left = 0
+limit_right = 0
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+
+[node name="Obstucalos" type="Node2D" parent="." unique_id=951485554]
+
+[node name="Rama" parent="Obstucalos" unique_id=1731731900 instance=ExtResource("8_afvyn")]
+position = Vector2(315, -1586)
+
+[node name="Foreground" type="Node2D" parent="." unique_id=516605692]
+
+[node name="PrimerNivelArbolDerecha" type="Sprite2D" parent="Foreground" unique_id=1675354315]
+position = Vector2(202, -547)
+texture = ExtResource("5_yllob")
+
+[node name="PrimerNivelArbolDerecha2" type="Sprite2D" parent="Foreground" unique_id=769257852]
+position = Vector2(200, -2078)
+texture = ExtResource("5_yllob")
+
+[node name="PrimerNivelArbolIzq" type="Sprite2D" parent="Foreground" unique_id=1269086613]
+position = Vector2(-234, -550)
+texture = ExtResource("6_xrppn")
+
+[node name="PrimerNivelArbolIzq2" type="Sprite2D" parent="Foreground" unique_id=439419050]
+position = Vector2(-247, -2086)
+texture = ExtResource("6_xrppn")
+
+[node name="Boundaries" type="Node2D" parent="." unique_id=108026767]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Boundaries" unique_id=1175821267]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/StaticBody2D" unique_id=1489880431]
+position = Vector2(-526, -1314.625)
+shape = SubResource("RectangleShape2D_puj6c")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Boundaries/StaticBody2D" unique_id=2123067448]
+position = Vector2(530, -1310)
+shape = SubResource("RectangleShape2D_puj6c")
+
+[node name="floor3" type="StaticBody2D" parent="." unique_id=1440974725]
+position = Vector2(0, 104)
+collision_layer = 16
+collision_mask = 0
+
+[node name="TextureRect" type="TextureRect" parent="floor3" unique_id=2075482220]
+offset_left = -1341.0
+offset_top = 93.0
+offset_right = 1339.0
+offset_bottom = 124.0
+texture = ExtResource("7_xrppn")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor3" unique_id=97714252]
+position = Vector2(3, 103)
+shape = SubResource("RectangleShape2D_afvyn")
+
+[node name="Enemies" type="Node2D" parent="." unique_id=1315112143]
+
+[node name="Bird" parent="Enemies" unique_id=1463511477 instance=ExtResource("8_4ypuw")]
+position = Vector2(637, -1842)
+
+[node name="Bird2" parent="Enemies" unique_id=1077608655 instance=ExtResource("8_4ypuw")]
+position = Vector2(-637, -1362)
+DIRECTION = 1
