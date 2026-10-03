@@ -1,28 +1,28 @@
 [gd_scene format=3 uid="uid://omedo3fbd8q8"]
 
 [ext_resource type="Script" uid="uid://c68w27ug6moy4" path="res://scripts/player/player.gd" id="1_8afob"]
-[ext_resource type="Texture2D" uid="uid://dbarbl81kwkqr" path="res://assets/final/main character/rodar/rodar_derecha_01.png" id="2_0owmy"]
-[ext_resource type="Texture2D" uid="uid://bevfdualra5j5" path="res://assets/final/main character/caida libre/caida_libre_01.png" id="2_3j4b4"]
+[ext_resource type="Texture2D" uid="uid://dbarbl81kwkqr" path="res://assets/final/main character/cabeza/rodar/rodar_derecha_01.png" id="2_0owmy"]
+[ext_resource type="Texture2D" uid="uid://bevfdualra5j5" path="res://assets/final/main character/cabeza/caida libre/caida_libre_01.png" id="2_3j4b4"]
 [ext_resource type="Script" uid="uid://f2f8un86mfkg" path="res://scripts/state_machine/state_machine.gd" id="2_75vfm"]
 [ext_resource type="Texture2D" uid="uid://dxen127pm6ncw" path="res://assets/placeholders/Background/Purple.png" id="2_fcs02"]
 [ext_resource type="Script" uid="uid://bfahbrfogjdvv" path="res://scripts/player/states/idle.gd" id="3_0owmy"]
-[ext_resource type="Texture2D" uid="uid://8w63645dx4fs" path="res://assets/final/main character/rodar/rodar_derecha_02.png" id="3_gx1jg"]
+[ext_resource type="Texture2D" uid="uid://8w63645dx4fs" path="res://assets/final/main character/cabeza/rodar/rodar_derecha_02.png" id="3_gx1jg"]
 [ext_resource type="Texture2D" uid="uid://sj32m61adxev" path="res://assets/placeholders/Background/Yellow.png" id="3_myrg7"]
-[ext_resource type="Texture2D" uid="uid://dlggomi08s4ca" path="res://assets/final/main character/caida libre/caida_libre_02.png" id="3_yj68g"]
-[ext_resource type="Texture2D" uid="uid://dw5dwbu1vpd1d" path="res://assets/final/main character/caida libre/caida_libre_03.png" id="4_ioxgp"]
+[ext_resource type="Texture2D" uid="uid://dlggomi08s4ca" path="res://assets/final/main character/cabeza/caida libre/caida_libre_02.png" id="3_yj68g"]
+[ext_resource type="Texture2D" uid="uid://dw5dwbu1vpd1d" path="res://assets/final/main character/cabeza/caida libre/caida_libre_03.png" id="4_ioxgp"]
 [ext_resource type="Script" uid="uid://cu1s8v6t5gj02" path="res://scripts/player/states/roll.gd" id="4_qek5x"]
-[ext_resource type="Texture2D" uid="uid://dcey8qhp76es0" path="res://assets/final/main character/rodar/rodar_derecha_03.png" id="4_ugbui"]
-[ext_resource type="Texture2D" uid="uid://bc1cx014wufxx" path="res://assets/final/main character/caida libre/caida_libre_04.png" id="5_cnsyf"]
-[ext_resource type="Texture2D" uid="uid://cxctsmk832mw7" path="res://assets/final/main character/rodar/rodar_derecha_04.png" id="5_fcs02"]
-[ext_resource type="Texture2D" uid="uid://cuuhilfr13w5d" path="res://assets/final/main character/caida libre/caida_libre_05.png" id="6_007i1"]
+[ext_resource type="Texture2D" uid="uid://dcey8qhp76es0" path="res://assets/final/main character/cabeza/rodar/rodar_derecha_03.png" id="4_ugbui"]
+[ext_resource type="Texture2D" uid="uid://bc1cx014wufxx" path="res://assets/final/main character/cabeza/caida libre/caida_libre_04.png" id="5_cnsyf"]
+[ext_resource type="Texture2D" uid="uid://cxctsmk832mw7" path="res://assets/final/main character/cabeza/rodar/rodar_derecha_04.png" id="5_fcs02"]
+[ext_resource type="Texture2D" uid="uid://cuuhilfr13w5d" path="res://assets/final/main character/cabeza/caida libre/caida_libre_05.png" id="6_007i1"]
 [ext_resource type="Script" uid="uid://c88fixbwvy2cj" path="res://scripts/player/states/fall.gd" id="6_h17s1"]
-[ext_resource type="Texture2D" uid="uid://cnhrwt8u61bd7" path="res://assets/final/main character/rodar/rodar_derecha_05.png" id="6_myrg7"]
-[ext_resource type="Texture2D" uid="uid://dtjjadhcwfykq" path="res://assets/final/main character/caida libre/caida_libre_06.png" id="7_6cv16"]
-[ext_resource type="Texture2D" uid="uid://cwpc12yqsfcc5" path="res://assets/final/main character/rodar/rodar_derecha_06.png" id="7_kvlxm"]
-[ext_resource type="Texture2D" uid="uid://dddl7ehwtwxin" path="res://assets/final/main character/caida libre/caida_libre_07.png" id="8_j4nxn"]
-[ext_resource type="Texture2D" uid="uid://j4k223ljunce" path="res://assets/final/main character/rodar/rodar_derecha_07.png" id="8_uf5tr"]
-[ext_resource type="Texture2D" uid="uid://b7phjrxt7xc1p" path="res://assets/final/main character/caida libre/caida_libre_08.png" id="9_28m0y"]
-[ext_resource type="Texture2D" uid="uid://dqs12rwqi7nru" path="res://assets/final/main character/rodar/rodar_derecha_08.png" id="9_ugbui"]
+[ext_resource type="Texture2D" uid="uid://cnhrwt8u61bd7" path="res://assets/final/main character/cabeza/rodar/rodar_derecha_05.png" id="6_myrg7"]
+[ext_resource type="Texture2D" uid="uid://dtjjadhcwfykq" path="res://assets/final/main character/cabeza/caida libre/caida_libre_06.png" id="7_6cv16"]
+[ext_resource type="Texture2D" uid="uid://cwpc12yqsfcc5" path="res://assets/final/main character/cabeza/rodar/rodar_derecha_06.png" id="7_kvlxm"]
+[ext_resource type="Texture2D" uid="uid://dddl7ehwtwxin" path="res://assets/final/main character/cabeza/caida libre/caida_libre_07.png" id="8_j4nxn"]
+[ext_resource type="Texture2D" uid="uid://j4k223ljunce" path="res://assets/final/main character/cabeza/rodar/rodar_derecha_07.png" id="8_uf5tr"]
+[ext_resource type="Texture2D" uid="uid://b7phjrxt7xc1p" path="res://assets/final/main character/cabeza/caida libre/caida_libre_08.png" id="9_28m0y"]
+[ext_resource type="Texture2D" uid="uid://dqs12rwqi7nru" path="res://assets/final/main character/cabeza/rodar/rodar_derecha_08.png" id="9_ugbui"]
 [ext_resource type="Script" uid="uid://bheaprxf8bv5v" path="res://scripts/player/states/player_death.gd" id="16_myrg7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_75vfm"]
@@ -116,7 +116,6 @@ script = ExtResource("1_8afob")
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_75vfm")
 animation = &"player_fall"
-frame_progress = 0.1865449
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=671644245]
 shape = SubResource("CircleShape2D_0owmy")

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bgh3ue3k5334i"]
+
+[ext_resource type="Texture2D" uid="uid://dl7h5wtc84mru" path="res://assets/final/main character/partes recogibles/dorso.png" id="1_r51ai"]
+
+[node name="Torso" type="Node2D" unique_id=248603890]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1435456999]
+scale = Vector2(0.05925178, 0.05925178)
+texture = ExtResource("1_r51ai")
