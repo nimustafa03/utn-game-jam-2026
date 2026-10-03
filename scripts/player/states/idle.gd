@@ -2,6 +2,7 @@ extends PlayerState
 ## Quieto en el piso.
 
 
+
 func physics_update(delta: float) -> void:
 	player.apply_gravity(delta)
 	player.apply_friction(delta)

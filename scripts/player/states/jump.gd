@@ -5,6 +5,7 @@ const JUMP_CUT := 0.5
 
 
 func enter(_previous_state: StringName) -> void:
+	super(_previous_state)
 	player.velocity.y = player.jump_velocity
 
 
