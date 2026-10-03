@@ -11,6 +11,6 @@ func physics_update(delta: float) -> void:
 
 	if player.is_on_floor():
 		if direction != 0.0:
-			transitioned.emit(self, &"walk")
+			transitioned.emit(self, &"roll")
 		else:
 			transitioned.emit(self, &"idle")

@@ -8,7 +8,7 @@ extends State
 var player: Player:
 	get:
 		return actor as Player
-var animation_playback_speed : float = 1.0
 
 func enter(_previous_state: StringName) -> void:
-	player.sprite.play(ANIMATION_NAME, animation_playback_speed)
+	player.sprite.speed_scale = 1.0
+	player.sprite.play(ANIMATION_NAME)

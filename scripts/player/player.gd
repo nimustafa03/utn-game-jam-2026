@@ -61,3 +61,7 @@ func _ensure_input_actions() -> void:
 			var ev := InputEventKey.new()
 			ev.physical_keycode = key as Key
 			InputMap.action_add_event(action, ev)
+
+func die():
+	var state_machine = get_node("StateMachine")
+	state_machine._on_state_transitioned(state_machine.current_state, &"death")

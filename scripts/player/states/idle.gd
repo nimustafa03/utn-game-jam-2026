@@ -10,7 +10,5 @@ func physics_update(delta: float) -> void:
 
 	if not player.is_on_floor():
 		transitioned.emit(self, &"fall")
-	elif Input.is_action_just_pressed("jump"):
-		transitioned.emit(self, &"jump")
 	elif player.get_move_direction() != 0.0:
-		transitioned.emit(self, &"walk")
+		transitioned.emit(self, &"roll")
