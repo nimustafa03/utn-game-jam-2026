@@ -7,16 +7,10 @@
 [ext_resource type="Script" uid="uid://dqox2ah13m7gj" path="res://scripts/player/states/jump.gd" id="5_5gtgg"]
 [ext_resource type="Script" uid="uid://c88fixbwvy2cj" path="res://scripts/player/states/fall.gd" id="6_h17s1"]
 
-[sub_resource type="ImageTexture" id="ImageTexture_8afob"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dovo2"]
 
 [node name="Player" type="CharacterBody2D" unique_id=1359619575]
-position = Vector2(178747, 429721)
 script = ExtResource("1_8afob")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1725861746]
-texture = SubResource("ImageTexture_8afob")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=671644245]
 shape = SubResource("RectangleShape2D_dovo2")
@@ -35,3 +29,5 @@ script = ExtResource("5_5gtgg")
 
 [node name="Fall" type="Node" parent="StateMachine" unique_id=1919776162]
 script = ExtResource("6_h17s1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1634576988]
