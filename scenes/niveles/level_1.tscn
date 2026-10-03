@@ -8,12 +8,13 @@
 [ext_resource type="Texture2D" uid="uid://d1usstcpsuk1y" path="res://assets/placeholders/Background/Green.png" id="7_xrppn"]
 [ext_resource type="PackedScene" uid="uid://cq8g3h6wd1r0a" path="res://scenes/obstaculos/enemigos/flying_enemy.tscn" id="8_4ypuw"]
 [ext_resource type="PackedScene" uid="uid://dbytibvod7xdp" path="res://scenes/obstaculos/ramas/rama1.tscn" id="8_afvyn"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_puj6c"]
-size = Vector2(97, 3062.75)
+[ext_resource type="PackedScene" uid="uid://bgh3ue3k5334i" path="res://scenes/cuerpoRoto/torso.tscn" id="9_4ypuw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_afvyn"]
 size = Vector2(2666, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_puj6c"]
+size = Vector2(97, 3062.75)
 
 [node name="Level1" type="Node2D" unique_id=274241641]
 
@@ -62,6 +63,29 @@ texture = ExtResource("2_qabiv")
 position = Vector2(-360.99997, -1338.9998)
 scale = Vector2(0.3563074, 0.3563074)
 
+[node name="Obstucalos" type="Node2D" parent="." unique_id=951485554]
+
+[node name="Rama" parent="Obstucalos" unique_id=1731731900 instance=ExtResource("8_afvyn")]
+position = Vector2(315, -1586)
+
+[node name="floor3" type="StaticBody2D" parent="." unique_id=1440974725]
+position = Vector2(0, 104)
+collision_layer = 16
+collision_mask = 0
+
+[node name="TextureRect" type="TextureRect" parent="floor3" unique_id=2075482220]
+offset_left = -1341.0
+offset_top = 68.0
+offset_right = 1339.0
+offset_bottom = 152.0
+texture = ExtResource("7_xrppn")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor3" unique_id=97714252]
+position = Vector2(3, 103)
+shape = SubResource("RectangleShape2D_afvyn")
+
 [node name="Player" parent="." unique_id=1359619575 instance=ExtResource("1_ecpkq")]
 position = Vector2(0, -3486)
 
@@ -70,11 +94,6 @@ limit_left = 0
 limit_right = 0
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
-
-[node name="Obstucalos" type="Node2D" parent="." unique_id=951485554]
-
-[node name="Rama" parent="Obstucalos" unique_id=1731731900 instance=ExtResource("8_afvyn")]
-position = Vector2(315, -1586)
 
 [node name="Foreground" type="Node2D" parent="." unique_id=516605692]
 
@@ -108,24 +127,6 @@ shape = SubResource("RectangleShape2D_puj6c")
 position = Vector2(530, -1310)
 shape = SubResource("RectangleShape2D_puj6c")
 
-[node name="floor3" type="StaticBody2D" parent="." unique_id=1440974725]
-position = Vector2(0, 104)
-collision_layer = 16
-collision_mask = 0
-
-[node name="TextureRect" type="TextureRect" parent="floor3" unique_id=2075482220]
-offset_left = -1341.0
-offset_top = 93.0
-offset_right = 1339.0
-offset_bottom = 124.0
-texture = ExtResource("7_xrppn")
-expand_mode = 1
-stretch_mode = 1
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor3" unique_id=97714252]
-position = Vector2(3, 103)
-shape = SubResource("RectangleShape2D_afvyn")
-
 [node name="Enemies" type="Node2D" parent="." unique_id=1315112143]
 
 [node name="Bird" parent="Enemies" unique_id=1463511477 instance=ExtResource("8_4ypuw")]
@@ -134,3 +135,6 @@ position = Vector2(637, -1842)
 [node name="Bird2" parent="Enemies" unique_id=1077608655 instance=ExtResource("8_4ypuw")]
 position = Vector2(-637, -1362)
 DIRECTION = 1
+
+[node name="Torso" parent="Enemies" unique_id=248603890 instance=ExtResource("9_4ypuw")]
+position = Vector2(357, 179)
