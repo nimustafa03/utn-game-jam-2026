@@ -4,8 +4,9 @@ extends PlayerState
 @export var INITIAL_BOUNCE_IMPULSE: float = 300.0
 @export_range(0.0, 1.0) var IMPACT_SPEED_MULTIPLIER: float = 0.25
 @export_range(0.1, 1.0) var FALL_GRAVITY_SCALE: float = 0.5
-@export_file("*.mp3","*.ogg","*.wav") var fallSFX: String = "res://assets/final/sonidos/Sonido fx almohada sin copyright [HQ].mp3"
+@export_file("*.mp3","*.ogg","*.wav") var fallSFX: String = "res://assets/final/sonidos/pillowFall.mp3"
 @export var fall_sfx_player: AudioStreamPlayer2D
+@export var FALL_SPEED : float = 700.0 
 
 const MIN_BOUNCE_IMPULSE := 40.0
 const BOUNCE_FALLOFF := 0.5
@@ -13,6 +14,7 @@ const BOUNCE_FALLOFF := 0.5
 var bounce_impulse := 0.0
 var was_on_floor := false
 
+var fallSpeedMultiplier : float = 1.0
 
 func enter(previous_state: StringName) -> void:
 	super(previous_state)
@@ -29,11 +31,20 @@ func enter(previous_state: StringName) -> void:
 		return
 	fall_sfx_player.stream = fall_stream
 
+func update(delta: float) -> void:
+	super(delta)
+	if Input.is_action_pressed("move_down"):
+		fallSpeedMultiplier = 1.5
+	if Input.is_action_pressed("move_up"):
+		fallSpeedMultiplier = 0.5
+	
+	if Input.is_action_just_released("move_down") || Input.is_action_just_released("move_up"):
+		fallSpeedMultiplier = 1.0
 
 func physics_update(delta: float) -> void:
 	var direction := player.get_move_direction()
-	player.apply_gravity(delta * FALL_GRAVITY_SCALE)
-	player.accelerate_horizontal(direction, delta, player.air_control)
+	player.velocity.y = move_toward(player.velocity.y, FALL_SPEED*fallSpeedMultiplier, SLIDE*delta)
+	player.velocity.x = move_toward(player.velocity.x, SPEED*direction, SLIDE*delta)
 	var impact_speed := maxf(player.velocity.y, 0.0)
 	player.move_and_slide()
 

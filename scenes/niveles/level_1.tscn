@@ -498,6 +498,7 @@ position = Vector2(713, -8724)
 [node name="Bird2" parent="EnemyGroup3" unique_id=1994807099 instance=ExtResource("8_4ypuw")]
 position = Vector2(-724, -8345)
 DIRECTION = 1
+SPEED = 650.0
 
 [node name="EnemyGroup4" type="Node2D" parent="." unique_id=1994879621]
 position = Vector2(0, 3791)
@@ -544,6 +545,7 @@ max_fall_speed = 500.0
 position = Vector2(3, 233)
 limit_left = 0
 limit_right = 0
+limit_bottom = 250
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 drag_horizontal_enabled = true
