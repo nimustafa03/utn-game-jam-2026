@@ -483,6 +483,7 @@ position = Vector2(0, 2685)
 
 [node name="Bird" parent="EnemyGroup2" unique_id=1230204698 instance=ExtResource("8_4ypuw")]
 position = Vector2(680, -10945)
+SPEED = 500.0
 
 [node name="Bird2" parent="EnemyGroup2" unique_id=311005854 instance=ExtResource("8_4ypuw")]
 position = Vector2(-670, -10462)

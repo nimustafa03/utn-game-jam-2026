@@ -18,7 +18,6 @@ func enter(previous_state: StringName) -> void:
 
 func physics_update(delta: float) -> void:
 	var direction := player.get_move_direction()
-	player.update_facing(direction)
 	player.apply_gravity(delta * FALL_GRAVITY_SCALE)
 	player.accelerate_horizontal(direction, delta, player.air_control)
 	var impact_speed := maxf(player.velocity.y, 0.0)

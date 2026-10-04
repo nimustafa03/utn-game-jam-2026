@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://8el7vk84u72p"]
 
+[ext_resource type="Script" uid="uid://c68w27ug6moy4" path="res://scripts/player/player.gd" id="1_ly64h"]
 [ext_resource type="Texture2D" uid="uid://bvhdvklyr5h2v" path="res://assets/final/main character/cuerpo/dash/dash_derecha_corregido_04.png" id="5_qfyj7"]
 [ext_resource type="Texture2D" uid="uid://dfi1kkp4n8lfc" path="res://assets/final/main character/cuerpo/dash/dash_derecha_corregido_05.png" id="6_di2vn"]
 [ext_resource type="Texture2D" uid="uid://bwbf7xa27b3j2" path="res://assets/final/main character/cuerpo/dash/dash_derecha_corregido_06.png" id="7_vppky"]
@@ -83,8 +84,11 @@
 [ext_resource type="Texture2D" uid="uid://3eotfyttp2h8" path="res://assets/final/main character/cuerpo/caminando/PJ Caminando_00014.png" id="85_eu3dd"]
 [ext_resource type="Texture2D" uid="uid://c0bjqash80ji5" path="res://assets/final/main character/cuerpo/caminando/PJ Caminando_00015.png" id="86_ou8jj"]
 [ext_resource type="Texture2D" uid="uid://cov7l6vp0ejin" path="res://assets/final/main character/cuerpo/caminando/PJ Caminando_00016.png" id="87_615t0"]
+[ext_resource type="Script" uid="uid://f2f8un86mfkg" path="res://scripts/state_machine/state_machine.gd" id="88_r1lge"]
 [ext_resource type="Texture2D" uid="uid://d256x742mhk3k" path="res://assets/final/main character/cuerpo/caminando/PJ Caminando_00017.png" id="88_v8dyp"]
+[ext_resource type="Script" uid="uid://bmg18g2s02gnl" path="res://scripts/player/player_state.gd" id="89_r1lge"]
 [ext_resource type="Texture2D" uid="uid://5ivaxmqraoxb" path="res://assets/final/main character/cuerpo/caminando/PJ Caminando_00018.png" id="89_rs84d"]
+[ext_resource type="Script" uid="uid://c3bnyibtg63sg" path="res://scenes/player/idleBod.gd" id="89_sht6i"]
 [ext_resource type="Texture2D" uid="uid://dp6t2mbsbuni4" path="res://assets/final/main character/cuerpo/caminando/PJ Caminando_00019.png" id="90_fklua"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hfvht"]
@@ -373,13 +377,35 @@ radius = 35.0
 height = 202.0
 
 [node name="player_cuerpo" type="CharacterBody2D" unique_id=846144349]
+script = ExtResource("1_ly64h")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=281461900]
 scale = Vector2(0.11999999, 0.12000005)
 sprite_frames = SubResource("SpriteFrames_hfvht")
 animation = &"walk"
-frame_progress = 0.16982467
+frame_progress = 0.17315109
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=933891769]
 position = Vector2(0, 8)
 shape = SubResource("CapsuleShape2D_ifbcw")
+
+[node name="StateMachine" type="Node" parent="." unique_id=1417567120]
+script = ExtResource("88_r1lge")
+metadata/_custom_type_script = "uid://f2f8un86mfkg"
+
+[node name="Idle" type="Node" parent="StateMachine" unique_id=503471125]
+script = ExtResource("89_sht6i")
+ANIMATION_NAME = "idle"
+metadata/_custom_type_script = "uid://bmg18g2s02gnl"
+
+[node name="Walk" type="Node" parent="StateMachine" unique_id=798795732]
+script = ExtResource("89_r1lge")
+metadata/_custom_type_script = "uid://bmg18g2s02gnl"
+
+[node name="Dash" type="Node" parent="StateMachine" unique_id=1289468420]
+script = ExtResource("89_r1lge")
+metadata/_custom_type_script = "uid://bmg18g2s02gnl"
+
+[node name="JumpFall" type="Node" parent="StateMachine" unique_id=129988947]
+script = ExtResource("89_r1lge")
+metadata/_custom_type_script = "uid://bmg18g2s02gnl"
