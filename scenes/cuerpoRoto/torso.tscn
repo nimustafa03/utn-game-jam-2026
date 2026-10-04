@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://bgh3ue3k5334i"]
+
+[ext_resource type="Texture2D" uid="uid://dl7h5wtc84mru" path="res://assets/final/main character/partes recogibles/dorso.png" id="1_r51ai"]
+[ext_resource type="Script" uid="uid://cnn68bhfpci63" path="res://scenes/cuerpoRoto/floatingHeart.gd" id="2_vo2hi"]
+[ext_resource type="Texture2D" uid="uid://056mbw37k774" path="res://assets/final/main character/partes recogibles/corazon/corazon_palpito_00.png" id="2_x66nm"]
+[ext_resource type="Texture2D" uid="uid://jyer6opad02t" path="res://assets/final/main character/partes recogibles/corazon/corazon_palpito_01.png" id="3_vo2hi"]
+[ext_resource type="Texture2D" uid="uid://dr5pawnewqb10" path="res://assets/final/main character/partes recogibles/corazon/corazon_palpito_02.png" id="4_r4b17"]
+[ext_resource type="Texture2D" uid="uid://dp730f8r4w3cv" path="res://assets/final/main character/partes recogibles/corazon/corazon_palpito_03.png" id="5_ojes5"]
+[ext_resource type="Texture2D" uid="uid://dtmppxgvmjsh1" path="res://assets/final/main character/partes recogibles/corazon/corazon_palpito_04.png" id="6_y8u8o"]
+[ext_resource type="Texture2D" uid="uid://ldxu50eshk2" path="res://assets/final/main character/partes recogibles/corazon/corazon_palpito_05.png" id="7_drh7d"]
+[ext_resource type="Texture2D" uid="uid://xsk6nqfa1bc7" path="res://assets/final/main character/partes recogibles/corazon/corazon_palpito_06.png" id="8_dpxhq"]
+[ext_resource type="Texture2D" uid="uid://0wekr5gwqnih" path="res://assets/final/main character/partes recogibles/corazon/corazon_palpito_07.png" id="9_4n5cp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n3m86"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_x66nm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vo2hi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_r4b17")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ojes5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_y8u8o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_drh7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_dpxhq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4n5cp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Torso" type="Node2D" unique_id=248603890]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1435456999]
+scale = Vector2(0.1291654, 0.1291654)
+texture = ExtResource("1_r51ai")
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="." unique_id=935744441]
+script = ExtResource("2_vo2hi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatableBody2D" unique_id=435099642]
+position = Vector2(17.000002, -66.00001)
+scale = Vector2(0.12707627, 0.12707627)
+sprite_frames = SubResource("SpriteFrames_n3m86")
+frame_progress = 0.908691
