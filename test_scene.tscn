@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d1usstcpsuk1y" path="res://assets/placeholders/Background/Green.png" id="1_ia1lp"]
 [ext_resource type="PackedScene" uid="uid://bgh3ue3k5334i" path="res://scenes/cuerpoRoto/torso.tscn" id="3_coq8p"]
-[ext_resource type="PackedScene" uid="uid://8el7vk84u72p" path="res://scenes/player/playerCuerpo.tscn" id="3_sasra"]
+[ext_resource type="PackedScene" uid="uid://omedo3fbd8q8" path="res://scenes/player/playerHead.tscn" id="3_sasra"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
 size = Vector2(2666, 20)
@@ -47,9 +47,9 @@ shape = SubResource("RectangleShape2D_0xm2m")
 [node name="Torso" parent="." unique_id=248603890 instance=ExtResource("3_coq8p")]
 position = Vector2(235, 44)
 
-[node name="player_cuerpo" parent="." unique_id=846144349 instance=ExtResource("3_sasra")]
-position = Vector2(-1, -634)
+[node name="Player" parent="." unique_id=1359619575 instance=ExtResource("3_sasra")]
+position = Vector2(1, -536)
 
-[node name="Camera2D" type="Camera2D" parent="player_cuerpo" unique_id=1696048475]
-position = Vector2(0, -120)
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1696048475]
+position = Vector2(-2, -218)
 position_smoothing_enabled = true

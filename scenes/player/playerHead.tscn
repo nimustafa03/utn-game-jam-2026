@@ -114,6 +114,7 @@ radius = 27.073973
 collision_mask = 16
 script = ExtResource("1_8afob")
 max_speed = 300.0
+air_control = 1.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1634576988]
 scale = Vector2(0.2, 0.2)
@@ -138,8 +139,10 @@ ANIMATION_NAME = "player_roll"
 
 [node name="Fall" type="Node" parent="StateMachine" unique_id=1919776162 node_paths=PackedStringArray("fall_sfx_player")]
 script = ExtResource("6_h17s1")
-fallSFX = "uid://ckbahnwwu1rdl"
+fallSFX = "uid://dujxh6bt7ooe8"
 fall_sfx_player = NodePath("../../AudioStreamPlayer2D")
+SPEED = 500.0
+SLIDE = 2000.0
 ANIMATION_NAME = "player_fall"
 
 [node name="Death" type="Node" parent="StateMachine" unique_id=2134805227]
