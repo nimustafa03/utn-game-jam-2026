@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dbtsxuy8r4dxu"]
 
 [ext_resource type="Texture2D" uid="uid://d1usstcpsuk1y" path="res://assets/placeholders/Background/Green.png" id="1_ia1lp"]
+[ext_resource type="PackedScene" uid="uid://bgh3ue3k5334i" path="res://scenes/cuerpoRoto/torso.tscn" id="3_coq8p"]
 [ext_resource type="PackedScene" uid="uid://8el7vk84u72p" path="res://scenes/player/playerCuerpo.tscn" id="3_sasra"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
@@ -43,8 +44,12 @@ stretch_mode = 1
 position = Vector2(3, 103)
 shape = SubResource("RectangleShape2D_0xm2m")
 
+[node name="Torso" parent="." unique_id=248603890 instance=ExtResource("3_coq8p")]
+position = Vector2(235, 44)
+
 [node name="player_cuerpo" parent="." unique_id=846144349 instance=ExtResource("3_sasra")]
-position = Vector2(-6, -74)
+position = Vector2(-1, -634)
 
 [node name="Camera2D" type="Camera2D" parent="player_cuerpo" unique_id=1696048475]
-position = Vector2(6, -147)
+position = Vector2(0, -120)
+position_smoothing_enabled = true

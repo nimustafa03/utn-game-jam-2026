@@ -108,6 +108,8 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_0owmy"]
 radius = 27.073973
 
+[sub_resource type="AudioStream" id="AudioStream_l8eh2"]
+
 [node name="Player" type="CharacterBody2D" unique_id=1359619575]
 collision_mask = 16
 script = ExtResource("1_8afob")
@@ -134,11 +136,17 @@ SPEED = 500.0
 SLIDE = 1.0
 ANIMATION_NAME = "player_roll"
 
-[node name="Fall" type="Node" parent="StateMachine" unique_id=1919776162]
+[node name="Fall" type="Node" parent="StateMachine" unique_id=1919776162 node_paths=PackedStringArray("fall_sfx_player")]
 script = ExtResource("6_h17s1")
+fallSFX = "uid://ckbahnwwu1rdl"
+fall_sfx_player = NodePath("../../AudioStreamPlayer2D")
 ANIMATION_NAME = "player_fall"
 
 [node name="Death" type="Node" parent="StateMachine" unique_id=2134805227]
 script = ExtResource("16_myrg7")
 ANIMATION_NAME = "player_die"
 metadata/_custom_type_script = "uid://bmg18g2s02gnl"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=864022974]
+stream = SubResource("AudioStream_l8eh2")
+volume_db = 5.0

@@ -7,6 +7,8 @@ func update(_delta: float) -> void:
 
 func physics_update(delta:float) -> void:
 	player.velocity.y = lerp(player.velocity.y, 0.0, SLIDE)
+	player.apply_friction(delta)
+	player.apply_gravity(delta)
 	player.move_and_slide()
 	
 	if not player.is_on_floor():

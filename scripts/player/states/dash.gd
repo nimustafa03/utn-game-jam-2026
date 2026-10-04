@@ -18,6 +18,7 @@ func physics_update(delta: float) -> void:
 	
 	if is_zero_approx(player.velocity.x):
 		if player.is_on_floor():
+			player.get_node("DashComponent").dashed_while_airborne = false
 			if player.get_move_direction() != 0.0:
 				transitioned.emit(self, &"walk")
 			else:
