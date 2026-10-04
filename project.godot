@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="utn-game-jam-2026"
-run/main_scene="res://main.tscn"
+run/main_scene="uid://d02erwua17rxg"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 
 [input]

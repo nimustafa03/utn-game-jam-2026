@@ -3,6 +3,7 @@ extends PlayerState
 
 const MIN_ANIMATION_SPEED := 0.3
 const MAX_ANIMATION_SPEED := 1.0
+const RESTING_ANIMATION_SPEED := 0.08
 
 func enter(_previous_state: StringName) -> void:
 	super(_previous_state)
@@ -21,6 +22,7 @@ func physics_update(delta: float) -> void:
 	elif direction == 0.0:
 		player.velocity = lerp(player.velocity, Vector2.ZERO, SLIDE/2*delta)
 		if player.velocity.x > -1 && player.velocity.x < 1:
+			player.sprite.speed_scale = RESTING_ANIMATION_SPEED
 			transitioned.emit(self, &"idle")
 
 
@@ -31,4 +33,7 @@ func _update_animation_speed() -> void:
 		return
 
 	var speed_ratio := clampf(absf(player.velocity.x) / max_speed, 0.0, 1.0)
-	player.sprite.speed_scale = lerpf(MIN_ANIMATION_SPEED, MAX_ANIMATION_SPEED, speed_ratio)
+	player.sprite.speed_scale = maxf(
+		RESTING_ANIMATION_SPEED,
+		lerpf(MIN_ANIMATION_SPEED, MAX_ANIMATION_SPEED, speed_ratio)
+	)
