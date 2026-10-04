@@ -487,6 +487,7 @@ SPEED = 500.0
 
 [node name="Bird2" parent="EnemyGroup2" unique_id=311005854 instance=ExtResource("8_4ypuw")]
 position = Vector2(-670, -10462)
+DIRECTION = 1
 
 [node name="EnemyGroup3" type="Node2D" parent="." unique_id=1754402762]
 position = Vector2(0, 2685)
@@ -496,6 +497,7 @@ position = Vector2(713, -8724)
 
 [node name="Bird2" parent="EnemyGroup3" unique_id=1994807099 instance=ExtResource("8_4ypuw")]
 position = Vector2(-724, -8345)
+DIRECTION = 1
 
 [node name="EnemyGroup4" type="Node2D" parent="." unique_id=1994879621]
 position = Vector2(0, 3791)
@@ -510,12 +512,14 @@ SPEED = 900.0
 
 [node name="Bird3" parent="EnemyGroup4" unique_id=325340596 instance=ExtResource("8_4ypuw")]
 position = Vector2(-725, -7676)
+DIRECTION = 1
 
 [node name="Bird4" parent="EnemyGroup4" unique_id=461732864 instance=ExtResource("8_4ypuw")]
 position = Vector2(706, -7448)
 
 [node name="Bird5" parent="EnemyGroup4" unique_id=1534493975 instance=ExtResource("8_4ypuw")]
 position = Vector2(-724, -7269)
+DIRECTION = 1
 SPEED = 300.0
 
 [node name="EnemyGroup5" type="Node2D" parent="." unique_id=744853538]
@@ -523,6 +527,7 @@ position = Vector2(0, 3791)
 
 [node name="Bird" parent="EnemyGroup5" unique_id=722382662 instance=ExtResource("8_4ypuw")]
 position = Vector2(-724, -5328)
+DIRECTION = 1
 
 [node name="Bird2" parent="EnemyGroup5" unique_id=1713113456 instance=ExtResource("8_4ypuw")]
 position = Vector2(706, -4996)

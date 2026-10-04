@@ -39,7 +39,7 @@ func _pause_on_rest_frame() -> void:
 
 func physics_update(delta: float) -> void:
 	player.apply_gravity(delta)
-	player.velocity.y = lerp(player.velocity.y, 0.0, SLIDE)
+	player.velocity.x = lerp(player.velocity.x, 0.0, SLIDE)
 	player.move_and_slide()
 
 	if not player.is_on_floor():

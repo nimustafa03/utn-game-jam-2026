@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dbtsxuy8r4dxu"]
 
 [ext_resource type="Texture2D" uid="uid://d1usstcpsuk1y" path="res://assets/placeholders/Background/Green.png" id="1_ia1lp"]
-[ext_resource type="PackedScene" uid="uid://omedo3fbd8q8" path="res://scenes/player/playerHead.tscn" id="2_sasra"]
+[ext_resource type="PackedScene" uid="uid://8el7vk84u72p" path="res://scenes/player/playerCuerpo.tscn" id="3_sasra"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
 size = Vector2(2666, 20)
@@ -14,10 +14,10 @@ collision_layer = 16
 collision_mask = 0
 
 [node name="TextureRect" type="TextureRect" parent="floor4" unique_id=1596058192]
-offset_left = -1341.0
-offset_top = 59.0
-offset_right = 1339.0
-offset_bottom = 140.0
+offset_left = -1317.0
+offset_top = 61.0
+offset_right = 1337.0
+offset_bottom = 139.0
 texture = ExtResource("1_ia1lp")
 expand_mode = 1
 stretch_mode = 1
@@ -43,8 +43,8 @@ stretch_mode = 1
 position = Vector2(3, 103)
 shape = SubResource("RectangleShape2D_0xm2m")
 
-[node name="Player" parent="." unique_id=1359619575 instance=ExtResource("2_sasra")]
-position = Vector2(-1, 55)
+[node name="player_cuerpo" parent="." unique_id=846144349 instance=ExtResource("3_sasra")]
+position = Vector2(-6, -74)
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1696048475]
-zoom = Vector2(2, 2)
+[node name="Camera2D" type="Camera2D" parent="player_cuerpo" unique_id=1696048475]
+position = Vector2(6, -147)

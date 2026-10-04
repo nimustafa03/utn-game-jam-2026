@@ -7,24 +7,23 @@ const RESTING_ANIMATION_SPEED := 0.08
 
 func enter(_previous_state: StringName) -> void:
 	super(_previous_state)
-	player.sprite.flip_h = false
 	_update_animation_speed(player.get_move_direction())
 
 func physics_update(delta: float) -> void:
 	var direction := player.get_move_direction()
-	player.update_facing(direction)
 	player.sprite.flip_h = false
 	player.apply_gravity(delta)
 	player.velocity.x = lerp(player.velocity.x, SPEED*direction, SLIDE/2*delta)
 	
-	player.move_and_slide()
+	
 	_update_animation_speed(direction)
 	if not player.is_on_floor():
 		transitioned.emit(self, &"fall")
 	elif direction == 0.0:
 		player.velocity = lerp(player.velocity, Vector2.ZERO, SLIDE/2*delta)
-		if absf(player.velocity.x) < 5.0:
+		if absf(player.velocity.x) < 10.0:
 			transitioned.emit(self, &"idle")
+	player.move_and_slide()
 
 
 func _update_animation_speed(direction: float) -> void:

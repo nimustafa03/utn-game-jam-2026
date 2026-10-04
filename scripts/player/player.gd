@@ -17,10 +17,7 @@ var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 var facing: int = 1
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
-
-
-func _ready() -> void:
-	_ensure_input_actions()
+@onready var state_machine: StateMachine = $StateMachine
 
 
 func get_move_direction() -> float:
@@ -44,24 +41,5 @@ func update_facing(direction: float) -> void:
 		facing = int(signf(direction))
 		sprite.flip_h = facing < 0
 
-
-## Crea las acciones de teclado si todavía no existen en el Input Map.
-## Más adelante podés definirlas en Project Settings > Input Map y borrar esto.
-func _ensure_input_actions() -> void:
-	var bindings := {
-		"move_left": [KEY_A, KEY_LEFT],
-		"move_right": [KEY_D, KEY_RIGHT],
-		"jump": [KEY_SPACE, KEY_W, KEY_UP],
-	}
-	for action: String in bindings:
-		if InputMap.has_action(action):
-			continue
-		InputMap.add_action(action)
-		for key: int in bindings[action]:
-			var ev := InputEventKey.new()
-			ev.physical_keycode = key as Key
-			InputMap.action_add_event(action, ev)
-
 func die():
-	var state_machine = get_node("StateMachine")
 	state_machine._on_state_transitioned(state_machine.current_state, &"death")
