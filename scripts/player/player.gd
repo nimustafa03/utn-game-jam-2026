@@ -18,8 +18,10 @@ var facing: int = 1
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var state_machine: StateMachine = $StateMachine
-
-
+@onready var menuReinicio = $RestartScreen
+func _ready() -> void:
+	menuReinicio.solicitud_reinicio.connect(_on_reiniciar)
+	
 func get_move_direction() -> float:
 	return Input.get_axis("move_left", "move_right")
 
@@ -43,3 +45,6 @@ func update_facing(direction: float) -> void:
 
 func die():
 	state_machine._on_state_transitioned(state_machine.current_state, &"death")
+
+func _on_reiniciar():
+	get_tree().reload_current_scene()

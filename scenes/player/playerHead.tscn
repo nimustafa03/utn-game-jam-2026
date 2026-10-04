@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://b7phjrxt7xc1p" path="res://assets/final/main character/cabeza/caida libre/caida_libre_08.png" id="9_28m0y"]
 [ext_resource type="Texture2D" uid="uid://dqs12rwqi7nru" path="res://assets/final/main character/cabeza/rodar/rodar_derecha_08.png" id="9_ugbui"]
 [ext_resource type="Script" uid="uid://bheaprxf8bv5v" path="res://scripts/player/states/player_death.gd" id="16_myrg7"]
+[ext_resource type="PackedScene" uid="uid://b6ja6yml51psp" path="res://restart_screen.tscn" id="25_vmf32"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_75vfm"]
 animations = [{
@@ -150,3 +151,5 @@ metadata/_custom_type_script = "uid://bmg18g2s02gnl"
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=864022974]
 stream = SubResource("AudioStream_l8eh2")
 volume_db = 5.0
+
+[node name="RestartScreen" parent="." unique_id=1986782900 instance=ExtResource("25_vmf32")]
