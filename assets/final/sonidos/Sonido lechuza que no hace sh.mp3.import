@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c1wt6ayq5inwy"
+path="res://.godot/imported/Sonido lechuza que no hace sh.mp3-a2da5c264f5c67f7e7768bb478413dcc.mp3str"
+
+[deps]
+
+source_file="res://assets/final/sonidos/Sonido lechuza que no hace sh.mp3"
+dest_files=["res://.godot/imported/Sonido lechuza que no hace sh.mp3-a2da5c264f5c67f7e7768bb478413dcc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

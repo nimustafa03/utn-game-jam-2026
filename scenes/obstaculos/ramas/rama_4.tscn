@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b8bjkjjvj4f8v"]
+
+[ext_resource type="Script" uid="uid://na7rxwyi54pp" path="res://scenes/obstaculos/ramas/rama.gd" id="1_a8eki"]
+[ext_resource type="Texture2D" uid="uid://cp172hnb5ip5u" path="res://assets/final/mapas/rama_04.png" id="1_j7jxp"]
+
+[node name="rama4" type="Node2D" unique_id=2097758706]
+script = ExtResource("1_a8eki")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1172892201]
+texture = ExtResource("1_j7jxp")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1170247058]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=743611342]
+polygon = PackedVector2Array(-102, 3, 162, 80, 161, 19, 44, -29, -83, -74, -124, -58, -131, -26)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

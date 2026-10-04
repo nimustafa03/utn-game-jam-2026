@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://b6ja6yml51psp"]
+
+[ext_resource type="Script" uid="uid://3hioh1kx3tfd" path="res://restart_screen.gd" id="1_3s4qe"]
+
+[node name="RestartScreen" type="CanvasLayer" unique_id=1986782900]
+script = ExtResource("1_3s4qe")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1877427552]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.5
+offset_top = -29.0
+offset_right = 58.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Contador" type="Label" parent="VBoxContainer" unique_id=127233534]
+layout_mode = 2
+text = "5"
+horizontal_alignment = 1
+
+[node name="ReiniciarNivel" type="Button" parent="VBoxContainer" unique_id=1907259981]
+layout_mode = 2
+text = "Reiniciar nivel"
+
+[connection signal="pressed" from="VBoxContainer/ReiniciarNivel" to="." method="_on_reiniciar_nivel_pressed"]
