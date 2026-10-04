@@ -9,12 +9,15 @@
 [ext_resource type="PackedScene" uid="uid://cq8g3h6wd1r0a" path="res://scenes/obstaculos/enemigos/flying_enemy.tscn" id="8_4ypuw"]
 [ext_resource type="PackedScene" uid="uid://dbytibvod7xdp" path="res://scenes/obstaculos/ramas/rama1.tscn" id="8_afvyn"]
 [ext_resource type="PackedScene" uid="uid://bgh3ue3k5334i" path="res://scenes/cuerpoRoto/torso.tscn" id="9_4ypuw"]
+[ext_resource type="PackedScene" uid="uid://dwg7t1xlil6v0" path="res://scenes/obstaculos/ramas/rama_2.tscn" id="9_y3ls4"]
+[ext_resource type="PackedScene" uid="uid://bgo22fhi4bav3" path="res://scenes/obstaculos/ramas/rama_3.tscn" id="10_w8rqy"]
+[ext_resource type="PackedScene" uid="uid://b8bjkjjvj4f8v" path="res://scenes/obstaculos/ramas/rama_4.tscn" id="11_w8rqy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_afvyn"]
 size = Vector2(2666, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_puj6c"]
-size = Vector2(97, 3062.75)
+size = Vector2(134.5, 10487)
 
 [node name="Level1" type="Node2D" unique_id=274241641]
 
@@ -25,7 +28,7 @@ offset_bottom = 40.0
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1414638598]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=696653612]
-position = Vector2(450, 442)
+position = Vector2(598, -10628)
 motion_scale = Vector2(0.7, 0.7)
 
 [node name="TowerCenter" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1415567669]
@@ -48,8 +51,48 @@ position = Vector2(-360.99997, -253.6875)
 scale = Vector2(0.3563074, 0.3563074)
 texture = ExtResource("1_67omq")
 
+[node name="TowerCenter5" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1417567761]
+position = Vector2(-360.59274, 220.97813)
+scale = Vector2(0.3563074, 0.3563074)
+texture = ExtResource("1_67omq")
+
+[node name="TowerCenter6" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=29228668]
+position = Vector2(-360.23645, 680.2584)
+scale = Vector2(0.3563074, 0.3563074)
+texture = ExtResource("1_67omq")
+
+[node name="TowerCenter7" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=726659214]
+position = Vector2(-359.52383, 1154.5035)
+scale = Vector2(0.3563074, 0.3563074)
+texture = ExtResource("1_67omq")
+
+[node name="TowerCenter8" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1289483597]
+position = Vector2(-359.52383, 1628.036)
+scale = Vector2(0.3563074, 0.3563074)
+texture = ExtResource("1_67omq")
+
+[node name="TowerCenter9" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=492556596]
+position = Vector2(-360.59277, 2100.978)
+scale = Vector2(0.3563074, 0.3563074)
+texture = ExtResource("1_67omq")
+
+[node name="TowerCenter10" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1656463136]
+position = Vector2(-360.23648, 2560.2583)
+scale = Vector2(0.3563074, 0.3563074)
+texture = ExtResource("1_67omq")
+
+[node name="TowerCenter11" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=15051028]
+position = Vector2(-359.52386, 3034.5034)
+scale = Vector2(0.3563074, 0.3563074)
+texture = ExtResource("1_67omq")
+
+[node name="TowerCenter12" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=642189502]
+position = Vector2(-359.52386, 3508.036)
+scale = Vector2(0.3563074, 0.3563074)
+texture = ExtResource("1_67omq")
+
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1470046201]
-position = Vector2(450, 442)
+position = Vector2(598, -10628)
 motion_scale = Vector2(0.7, 0.7)
 
 [node name="TowerTop" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2" unique_id=370717251]
@@ -62,11 +105,6 @@ texture = ExtResource("2_qabiv")
 [node name="Tower" type="Node2D" parent="Background" unique_id=1590291584]
 position = Vector2(-360.99997, -1338.9998)
 scale = Vector2(0.3563074, 0.3563074)
-
-[node name="Obstucalos" type="Node2D" parent="." unique_id=951485554]
-
-[node name="Rama" parent="Obstucalos" unique_id=1731731900 instance=ExtResource("8_afvyn")]
-position = Vector2(315, -1586)
 
 [node name="floor3" type="StaticBody2D" parent="." unique_id=1440974725]
 position = Vector2(0, 104)
@@ -86,55 +124,339 @@ stretch_mode = 1
 position = Vector2(3, 103)
 shape = SubResource("RectangleShape2D_afvyn")
 
-[node name="Player" parent="." unique_id=1359619575 instance=ExtResource("1_ecpkq")]
-position = Vector2(0, -3486)
-
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1476838016]
-limit_left = 0
-limit_right = 0
-position_smoothing_enabled = true
-drag_horizontal_enabled = true
-
 [node name="Foreground" type="Node2D" parent="." unique_id=516605692]
 
-[node name="PrimerNivelArbolDerecha" type="Sprite2D" parent="Foreground" unique_id=1675354315]
+[node name="ArbolIzquierda" type="Node2D" parent="Foreground" unique_id=1705370679]
+position = Vector2(-234, -550)
+
+[node name="PrimerNivelArbolIzq" type="Sprite2D" parent="Foreground/ArbolIzquierda" unique_id=1269086613]
+texture = ExtResource("6_xrppn")
+
+[node name="PrimerNivelArbolIzq2" type="Sprite2D" parent="Foreground/ArbolIzquierda" unique_id=439419050]
+position = Vector2(-13, -1536)
+texture = ExtResource("6_xrppn")
+
+[node name="PrimerNivelArbolIzq3" type="Sprite2D" parent="Foreground/ArbolIzquierda" unique_id=2068696653]
+position = Vector2(0, -3033)
+texture = ExtResource("6_xrppn")
+
+[node name="PrimerNivelArbolIzq5" type="Sprite2D" parent="Foreground/ArbolIzquierda" unique_id=1557572278]
+position = Vector2(35, -5794)
+texture = ExtResource("6_xrppn")
+
+[node name="PrimerNivelArbolIzq6" type="Sprite2D" parent="Foreground/ArbolIzquierda" unique_id=1358511997]
+position = Vector2(22, -7330)
+texture = ExtResource("6_xrppn")
+
+[node name="PrimerNivelArbolIzq7" type="Sprite2D" parent="Foreground/ArbolIzquierda" unique_id=2031875391]
+position = Vector2(35, -8827)
+texture = ExtResource("6_xrppn")
+
+[node name="PrimerNivelArbolIzq4" type="Sprite2D" parent="Foreground/ArbolIzquierda" unique_id=117442710]
+position = Vector2(-13, -4569)
+texture = ExtResource("6_xrppn")
+
+[node name="ArbolDerecha" type="Node2D" parent="Foreground" unique_id=1355437684]
+
+[node name="PrimerNivelArbolDerecha" type="Sprite2D" parent="Foreground/ArbolDerecha" unique_id=1675354315]
 position = Vector2(202, -547)
 texture = ExtResource("5_yllob")
 
-[node name="PrimerNivelArbolDerecha2" type="Sprite2D" parent="Foreground" unique_id=769257852]
+[node name="PrimerNivelArbolDerecha2" type="Sprite2D" parent="Foreground/ArbolDerecha" unique_id=769257852]
 position = Vector2(200, -2078)
 texture = ExtResource("5_yllob")
 
-[node name="PrimerNivelArbolIzq" type="Sprite2D" parent="Foreground" unique_id=1269086613]
-position = Vector2(-234, -550)
-texture = ExtResource("6_xrppn")
+[node name="PrimerNivelArbolDerecha3" type="Sprite2D" parent="Foreground/ArbolDerecha" unique_id=226915016]
+position = Vector2(202, -3588)
+texture = ExtResource("5_yllob")
 
-[node name="PrimerNivelArbolIzq2" type="Sprite2D" parent="Foreground" unique_id=439419050]
-position = Vector2(-247, -2086)
-texture = ExtResource("6_xrppn")
+[node name="PrimerNivelArbolDerecha4" type="Sprite2D" parent="Foreground/ArbolDerecha" unique_id=1691186505]
+position = Vector2(200, -5119)
+texture = ExtResource("5_yllob")
+
+[node name="PrimerNivelArbolDerecha5" type="Sprite2D" parent="Foreground/ArbolDerecha" unique_id=894510700]
+position = Vector2(202, -6631)
+texture = ExtResource("5_yllob")
+
+[node name="PrimerNivelArbolDerecha6" type="Sprite2D" parent="Foreground/ArbolDerecha" unique_id=651521667]
+position = Vector2(200, -8162)
+texture = ExtResource("5_yllob")
+
+[node name="PrimerNivelArbolDerecha7" type="Sprite2D" parent="Foreground/ArbolDerecha" unique_id=1216786128]
+position = Vector2(200, -9452)
+texture = ExtResource("5_yllob")
 
 [node name="Boundaries" type="Node2D" parent="." unique_id=108026767]
+position = Vector2(0, -2369)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Boundaries" unique_id=1175821267]
 collision_layer = 16
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/StaticBody2D" unique_id=1489880431]
-position = Vector2(-526, -1314.625)
+position = Vector2(-562, -2538.5)
 shape = SubResource("RectangleShape2D_puj6c")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Boundaries/StaticBody2D" unique_id=2123067448]
-position = Vector2(530, -1310)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Boundaries/StaticBody2D" unique_id=2080603747]
+position = Vector2(571, -2610)
 shape = SubResource("RectangleShape2D_puj6c")
 
-[node name="Enemies" type="Node2D" parent="." unique_id=1315112143]
+[node name="BranchGroup1" type="Node2D" parent="." unique_id=1006645729]
+position = Vector2(0, -1309)
 
-[node name="Bird" parent="Enemies" unique_id=1463511477 instance=ExtResource("8_4ypuw")]
-position = Vector2(637, -1842)
+[node name="1" type="Node2D" parent="BranchGroup1" unique_id=1891940423]
+position = Vector2(200, -32)
 
-[node name="Bird2" parent="Enemies" unique_id=1077608655 instance=ExtResource("8_4ypuw")]
-position = Vector2(-637, -1362)
+[node name="rama2" parent="BranchGroup1/1" unique_id=927182798 instance=ExtResource("9_y3ls4")]
+position = Vector2(-490, -8734)
+rotation = 2.603493
+scale = Vector2(3.0420728, 1.8951737)
+
+[node name="rama3" parent="BranchGroup1/1" unique_id=891157465 instance=ExtResource("10_w8rqy")]
+position = Vector2(-620.0003, -8839)
+rotation = -3.5339515
+scale = Vector2(1.5351766, 1.5351766)
+
+[node name="2" type="Node2D" parent="BranchGroup1" unique_id=1400085649]
+position = Vector2(-32, 104)
+
+[node name="rama4" parent="BranchGroup1/2" unique_id=2097758706 instance=ExtResource("11_w8rqy")]
+position = Vector2(436.00003, -8342)
+rotation = -0.3311419
+scale = Vector2(2.6177115, 1.2536752)
+
+[node name="Rama" parent="BranchGroup1/2" unique_id=1731731900 instance=ExtResource("8_afvyn")]
+position = Vector2(-474.00006, -8089.001)
+rotation = -3.232659
+
+[node name="rama3" parent="BranchGroup1" unique_id=494005581 instance=ExtResource("10_w8rqy")]
+position = Vector2(285.99997, -7385)
+rotation = -0.3438088
+scale = Vector2(3.217357, -1.7969339)
+
+[node name="BranchGroup2" type="Node2D" parent="." unique_id=1122592385]
+position = Vector2(0, 2685)
+
+[node name="Rama" parent="BranchGroup2" unique_id=772208243 instance=ExtResource("8_afvyn")]
+position = Vector2(-400.00003, -10993)
+rotation = 2.3475347
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="rama4" parent="BranchGroup2" unique_id=1173570740 instance=ExtResource("11_w8rqy")]
+position = Vector2(419, -10677)
+rotation = -0.036993045
+scale = Vector2(2.6799965, 1.2799804)
+
+[node name="rama3" parent="BranchGroup2" unique_id=1448416679 instance=ExtResource("10_w8rqy")]
+position = Vector2(449.00027, -10168)
+rotation = 0.3734507
+
+[node name="rama5" parent="BranchGroup2" unique_id=713783010 instance=ExtResource("11_w8rqy")]
+position = Vector2(-310, -10151)
+rotation = -3.3847964
+scale = Vector2(2.767785, 1.1132051)
+
+[node name="rama6" parent="BranchGroup2" unique_id=53658953 instance=ExtResource("10_w8rqy")]
+position = Vector2(-459, -9711.999)
+rotation = 3.033479
+scale = Vector2(1.8609924, 1.2826562)
+
+[node name="rama2" parent="BranchGroup2" unique_id=82672866 instance=ExtResource("9_y3ls4")]
+position = Vector2(396.99997, -9700.001)
+rotation = -0.1604249
+scale = Vector2(1.8844491, 2.0733085)
+
+[node name="BranchGroup3" type="Node2D" parent="." unique_id=443861323]
+position = Vector2(0, -6059)
+
+[node name="Rama" parent="BranchGroup3" unique_id=1511723449 instance=ExtResource("8_afvyn")]
+position = Vector2(-332.0002, -569)
+rotation = 2.553654
+scale = Vector2(1.2730824, 1.415469)
+
+[node name="rama3" parent="BranchGroup3" unique_id=833872445 instance=ExtResource("10_w8rqy")]
+position = Vector2(329.00003, -625.999)
+rotation = 0.020153133
+scale = Vector2(1.763224, -1.0624114)
+
+[node name="rama2" parent="BranchGroup3" unique_id=1260330495 instance=ExtResource("9_y3ls4")]
+position = Vector2(-255.00002, -273)
+rotation = -3.02049
+scale = Vector2(2.191866, -1.7566851)
+
+[node name="rama7" parent="BranchGroup3" unique_id=1481760423 instance=ExtResource("11_w8rqy")]
+position = Vector2(-410.9999, -816.999)
+rotation = 3.0078306
+scale = Vector2(2.4512174, 1.3507018)
+
+[node name="Rama8" parent="BranchGroup3" unique_id=884154868 instance=ExtResource("8_afvyn")]
+position = Vector2(451.0001, -830)
+rotation = -0.75931823
+scale = Vector2(1.4035251, 1.518779)
+
+[node name="BranchGroup4" type="Node2D" parent="." unique_id=1433290646]
+position = Vector2(0, -6059)
+
+[node name="rama3" parent="BranchGroup4" unique_id=167724266 instance=ExtResource("10_w8rqy")]
+position = Vector2(-307.00006, 132)
+rotation = 2.9113715
+scale = Vector2(2.003369, 1.3709766)
+
+[node name="Rama" parent="BranchGroup4" unique_id=2032529173 instance=ExtResource("8_afvyn")]
+position = Vector2(443.00003, -16.000002)
+rotation = 0.095836185
+scale = Vector2(1.1197199, 1.3219922)
+
+[node name="rama2" parent="BranchGroup4" unique_id=1979406201 instance=ExtResource("9_y3ls4")]
+position = Vector2(-231.00037, 477.99902)
+rotation = 2.7917185
+scale = Vector2(2.7138476, 1.5194726)
+
+[node name="rama4" parent="BranchGroup4" unique_id=1594895540 instance=ExtResource("11_w8rqy")]
+position = Vector2(416, 686)
+rotation = 0.049763367
+scale = Vector2(1.2828417, 1.1188476)
+
+[node name="BranchGroup5" type="Node2D" parent="." unique_id=70384493]
+position = Vector2(0, 2685)
+
+[node name="rama2" parent="BranchGroup5" unique_id=1078375596 instance=ExtResource("9_y3ls4")]
+position = Vector2(375.99988, -5329.9995)
+rotation = -0.5799073
+scale = Vector2(2.2173095, 2.2173095)
+
+[node name="rama3" parent="BranchGroup5" unique_id=1450211996 instance=ExtResource("10_w8rqy")]
+position = Vector2(-335.00024, -5006)
+rotation = -3.1694145
+scale = Vector2(1.7420604, 1.7420604)
+
+[node name="rama4" parent="BranchGroup5" unique_id=2085518275 instance=ExtResource("11_w8rqy")]
+position = Vector2(-308.9998, -7197)
+rotation = -3.755216
+scale = Vector2(2.0858305, 1.2812229)
+
+[node name="rama5" parent="BranchGroup5" unique_id=973830513 instance=ExtResource("9_y3ls4")]
+position = Vector2(345.99982, -5949)
+rotation = 0.67516226
+scale = Vector2(1.7053456, -2.096753)
+
+[node name="Rama" parent="BranchGroup5" unique_id=1369592518 instance=ExtResource("8_afvyn")]
+position = Vector2(-292.9998, -5636)
+rotation = 2.3398187
+scale = Vector2(1.7701309, 1.3149453)
+
+[node name="rama6" parent="BranchGroup5" unique_id=1457957522 instance=ExtResource("10_w8rqy")]
+position = Vector2(378.00003, -7624)
+rotation = 0.06398296
+scale = Vector2(1.8519238, 1.2974057)
+
+[node name="rama7" parent="BranchGroup5" unique_id=1884658687 instance=ExtResource("9_y3ls4")]
+position = Vector2(-286.0003, -7823)
+rotation = 2.4711554
+scale = Vector2(2.5768957, 1.7009571)
+
+[node name="BranchGroup6" type="Node2D" parent="." unique_id=861368787]
+position = Vector2(0, 3791)
+
+[node name="Rama" parent="BranchGroup6" unique_id=684722785 instance=ExtResource("8_afvyn")]
+position = Vector2(-488.99976, -5815)
+rotation = 2.7778053
+
+[node name="rama4" parent="BranchGroup6" unique_id=1935037134 instance=ExtResource("11_w8rqy")]
+position = Vector2(273.00012, -5836)
+rotation = -0.25647876
+scale = Vector2(2.1575465, 0.97259533)
+
+[node name="BranchGroup7" type="Node2D" parent="." unique_id=616780793]
+position = Vector2(0, 3791)
+
+[node name="Rama" parent="BranchGroup7" unique_id=2040398091 instance=ExtResource("8_afvyn")]
+position = Vector2(-261.00012, -4292.0005)
+rotation = 2.5236928
+scale = Vector2(1.7288673, 1.0255909)
+
+[node name="rama3" parent="BranchGroup7" unique_id=1148266593 instance=ExtResource("10_w8rqy")]
+position = Vector2(334.0001, -4117)
+rotation = 0.30954084
+scale = Vector2(1.707666, 1)
+
+[node name="EnemyGroup1" type="Node2D" parent="." unique_id=1086945098]
+position = Vector2(0, -10145)
+
+[node name="Bird" parent="EnemyGroup1" unique_id=1463511477 instance=ExtResource("8_4ypuw")]
+position = Vector2(-725, -861)
 DIRECTION = 1
 
-[node name="Torso" parent="Enemies" unique_id=248603890 instance=ExtResource("9_4ypuw")]
+[node name="Bird2" parent="EnemyGroup1" unique_id=1227421237 instance=ExtResource("8_4ypuw")]
+position = Vector2(-725, -565)
+DIRECTION = 1
+SPEED = 600.0
+
+[node name="Bird3" parent="EnemyGroup1" unique_id=1320459600 instance=ExtResource("8_4ypuw")]
+position = Vector2(-725, -281)
+DIRECTION = 1
+SPEED = 650.0
+
+[node name="EnemyGroup2" type="Node2D" parent="." unique_id=2019802046]
+position = Vector2(0, 2685)
+
+[node name="Bird" parent="EnemyGroup2" unique_id=1230204698 instance=ExtResource("8_4ypuw")]
+position = Vector2(680, -10945)
+
+[node name="Bird2" parent="EnemyGroup2" unique_id=311005854 instance=ExtResource("8_4ypuw")]
+position = Vector2(-670, -10462)
+
+[node name="EnemyGroup3" type="Node2D" parent="." unique_id=1754402762]
+position = Vector2(0, 2685)
+
+[node name="Bird" parent="EnemyGroup3" unique_id=1899191782 instance=ExtResource("8_4ypuw")]
+position = Vector2(713, -8724)
+
+[node name="Bird2" parent="EnemyGroup3" unique_id=1994807099 instance=ExtResource("8_4ypuw")]
+position = Vector2(-724, -8345)
+
+[node name="EnemyGroup4" type="Node2D" parent="." unique_id=1994879621]
+position = Vector2(0, 3791)
+
+[node name="Bird" parent="EnemyGroup4" unique_id=850951184 instance=ExtResource("8_4ypuw")]
+position = Vector2(706, -7934)
+SPEED = 750.0
+
+[node name="Bird2" parent="EnemyGroup4" unique_id=471188752 instance=ExtResource("8_4ypuw")]
+position = Vector2(706, -7726)
+SPEED = 900.0
+
+[node name="Bird3" parent="EnemyGroup4" unique_id=325340596 instance=ExtResource("8_4ypuw")]
+position = Vector2(-725, -7676)
+
+[node name="Bird4" parent="EnemyGroup4" unique_id=461732864 instance=ExtResource("8_4ypuw")]
+position = Vector2(706, -7448)
+
+[node name="Bird5" parent="EnemyGroup4" unique_id=1534493975 instance=ExtResource("8_4ypuw")]
+position = Vector2(-724, -7269)
+SPEED = 300.0
+
+[node name="EnemyGroup5" type="Node2D" parent="." unique_id=744853538]
+position = Vector2(0, 3791)
+
+[node name="Bird" parent="EnemyGroup5" unique_id=722382662 instance=ExtResource("8_4ypuw")]
+position = Vector2(-724, -5328)
+
+[node name="Bird2" parent="EnemyGroup5" unique_id=1713113456 instance=ExtResource("8_4ypuw")]
+position = Vector2(706, -4996)
+SPEED = 1000.0
+
+[node name="Torso" parent="." unique_id=248603890 instance=ExtResource("9_4ypuw")]
 position = Vector2(357, 179)
+
+[node name="Player" parent="." unique_id=1359619575 instance=ExtResource("1_ecpkq")]
+position = Vector2(0, -13640)
+max_fall_speed = 500.0
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1476838016]
+position = Vector2(3, 233)
+limit_left = 0
+limit_right = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+drag_horizontal_enabled = true

@@ -13,6 +13,6 @@ texture = ExtResource("1_7bekd")
 collision_layer = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=2122334651]
-polygon = PackedVector2Array(186, 89, 173, 90, 139, 81, 86, 65, 48, 39, 24, 4, 3, -19, -23, -37, -37, -51, -48, -65, -57, -55, -77, -54, -97, -64, -107, -90, -121, -78, -142, -85, -153, -98, -158, -113, -164, -109, -163, -95, -145, -68, -127, -51, -108, -33, -82, -33, -45, -28, -27, -5, -18, 20, -22, 29, -20, 36, 13, 54, 43, 71, 69, 91, 105, 111, 159, 129, 182, 136, 196, 133, 198, 102)
+polygon = PackedVector2Array(181, 96, 103, 74, 35, 25, 4, -18, -48, -58, -106, -76, -162, -106, -129, -47, -86, -28, -36, -22, -11, 21, -11, 43, 75, 96, 173, 135, 211, 133, 201, 98)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://dbtsxuy8r4dxu"]
+
+[ext_resource type="Texture2D" uid="uid://d1usstcpsuk1y" path="res://assets/placeholders/Background/Green.png" id="1_ia1lp"]
+[ext_resource type="PackedScene" uid="uid://omedo3fbd8q8" path="res://scenes/player/player.tscn" id="2_sasra"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
+size = Vector2(2666, 20)
+
+[node name="test" type="Node2D" unique_id=2116721675]
+
+[node name="floor4" type="StaticBody2D" parent="." unique_id=792660536]
+position = Vector2(2656, 0)
+collision_layer = 16
+collision_mask = 0
+
+[node name="TextureRect" type="TextureRect" parent="floor4" unique_id=1596058192]
+offset_left = -1341.0
+offset_top = 59.0
+offset_right = 1339.0
+offset_bottom = 140.0
+texture = ExtResource("1_ia1lp")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor4" unique_id=2066216749]
+position = Vector2(3, 103)
+shape = SubResource("RectangleShape2D_0xm2m")
+
+[node name="floor3" type="StaticBody2D" parent="." unique_id=1458983377]
+collision_layer = 16
+collision_mask = 0
+
+[node name="TextureRect" type="TextureRect" parent="floor3" unique_id=1187376366]
+offset_left = -1341.0
+offset_top = 59.0
+offset_right = 1339.0
+offset_bottom = 140.0
+texture = ExtResource("1_ia1lp")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor3" unique_id=721815069]
+position = Vector2(3, 103)
+shape = SubResource("RectangleShape2D_0xm2m")
+
+[node name="Player" parent="." unique_id=1359619575 instance=ExtResource("2_sasra")]
+position = Vector2(-1, 55)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1696048475]
+zoom = Vector2(2, 2)
