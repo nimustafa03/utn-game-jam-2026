@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c8xe8voifmyga"]
 
 [ext_resource type="Texture2D" uid="uid://b538khbpn3dff" path="res://assets/final/mapas/tower_center.png" id="1_67omq"]
-[ext_resource type="PackedScene" uid="uid://omedo3fbd8q8" path="res://scenes/player/player.tscn" id="1_ecpkq"]
+[ext_resource type="PackedScene" uid="uid://omedo3fbd8q8" path="res://scenes/player/playerHead.tscn" id="1_ecpkq"]
 [ext_resource type="Texture2D" uid="uid://cbf7bqi8j4dgm" path="res://assets/final/mapas/tower_top.png" id="2_qabiv"]
 [ext_resource type="Texture2D" uid="uid://bigo1o0c5p7e3" path="res://assets/final/mapas/Primer_nivel_-_Arbol_derecha.png" id="5_yllob"]
 [ext_resource type="Texture2D" uid="uid://dbk8flai8fy3u" path="res://assets/final/mapas/Primer_nivel_-_Arbol_izq.png" id="6_xrppn"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dwg7t1xlil6v0" path="res://scenes/obstaculos/ramas/rama_2.tscn" id="9_y3ls4"]
 [ext_resource type="PackedScene" uid="uid://bgo22fhi4bav3" path="res://scenes/obstaculos/ramas/rama_3.tscn" id="10_w8rqy"]
 [ext_resource type="PackedScene" uid="uid://b8bjkjjvj4f8v" path="res://scenes/obstaculos/ramas/rama_4.tscn" id="11_w8rqy"]
+[ext_resource type="AudioStream" uid="uid://clt0trfgo4iyh" path="res://assets/final/musica/nivel-1.mp3" id="13_fhc0u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_afvyn"]
 size = Vector2(2666, 20)
@@ -88,6 +89,86 @@ texture = ExtResource("1_67omq")
 
 [node name="TowerCenter12" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=642189502]
 position = Vector2(-359.52386, 3508.036)
+scale = Vector2(0.3563074, 0.3563074)
+texture = ExtResource("1_67omq")
+
+[node name="TowerCenter13" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=756162881]
+position = Vector2(-359.59274, 3978.978)
+scale = Vector2(0.3563074, 0.3563074)
+texture = ExtResource("1_67omq")
+
+[node name="TowerCenter14" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=40158]
+position = Vector2(-359.23645, 4438.2583)
+scale = Vector2(0.3563074, 0.3563074)
+texture = ExtResource("1_67omq")
+
+[node name="TowerCenter15" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=2100509588]
+position = Vector2(-358.52383, 4912.5034)
+scale = Vector2(0.3563074, 0.3563074)
+texture = ExtResource("1_67omq")
+
+[node name="TowerCenter16" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1637506608]
+position = Vector2(-358.52383, 5386.0356)
+scale = Vector2(0.3563074, 0.3563074)
+texture = ExtResource("1_67omq")
+
+[node name="TowerCenter17" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=181389552]
+position = Vector2(-358.59277, 5860.978)
+scale = Vector2(0.3563074, 0.3563074)
+texture = ExtResource("1_67omq")
+
+[node name="TowerCenter18" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=567982650]
+position = Vector2(-358.23648, 6320.2583)
+scale = Vector2(0.3563074, 0.3563074)
+texture = ExtResource("1_67omq")
+
+[node name="TowerCenter19" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=7087144]
+position = Vector2(-357.52386, 6794.5034)
+scale = Vector2(0.3563074, 0.3563074)
+texture = ExtResource("1_67omq")
+
+[node name="TowerCenter20" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=4169352]
+position = Vector2(-357.52386, 7268.0356)
+scale = Vector2(0.3563074, 0.3563074)
+texture = ExtResource("1_67omq")
+
+[node name="TowerCenter21" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=128329897]
+position = Vector2(-358.59277, 7741.978)
+scale = Vector2(0.3563074, 0.3563074)
+texture = ExtResource("1_67omq")
+
+[node name="TowerCenter22" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1559518546]
+position = Vector2(-358.23648, 8201.259)
+scale = Vector2(0.3563074, 0.3563074)
+texture = ExtResource("1_67omq")
+
+[node name="TowerCenter23" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1281772618]
+position = Vector2(-357.52386, 8675.503)
+scale = Vector2(0.3563074, 0.3563074)
+texture = ExtResource("1_67omq")
+
+[node name="TowerCenter24" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=724609263]
+position = Vector2(-357.52386, 9149.035)
+scale = Vector2(0.3563074, 0.3563074)
+texture = ExtResource("1_67omq")
+
+[node name="TowerCenter25" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=898523472]
+position = Vector2(-357.59277, 9623.979)
+scale = Vector2(0.3563074, 0.3563074)
+texture = ExtResource("1_67omq")
+
+[node name="TowerCenter26" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1803839989]
+position = Vector2(-357.23648, 10083.259)
+scale = Vector2(0.3563074, 0.3563074)
+texture = ExtResource("1_67omq")
+
+[node name="TowerCenter27" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=522219275]
+position = Vector2(-356.52386, 10557.503)
+scale = Vector2(0.3563074, 0.3563074)
+texture = ExtResource("1_67omq")
+
+[node name="TowerCenter28" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=71208958]
+position = Vector2(-356.52386, 11031.035)
 scale = Vector2(0.3563074, 0.3563074)
 texture = ExtResource("1_67omq")
 
@@ -460,3 +541,8 @@ limit_right = 0
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 drag_horizontal_enabled = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=527653913]
+stream = ExtResource("13_fhc0u")
+volume_db = 5.0
+autoplay = true

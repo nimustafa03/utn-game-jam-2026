@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d02erwua17rxg"]
 
-[ext_resource type="Script" path="res://scenes/menu/menu.gd" id="1_d7r87"]
+[ext_resource type="Script" uid="uid://bjwdaiffb1m7o" path="res://scenes/menu/menu.gd" id="1_d7r87"]
 [ext_resource type="Texture2D" uid="uid://um8fm8myqthm" path="res://scenes/menu/Imagen de ChatGPT 3 oct 2026, 14_54_06.png" id="2_2owot"]
 [ext_resource type="AudioStream" uid="uid://dmiiyebyt2ye4" path="res://assets/final/musica/menu.mp3" id="3_2owot"]
 [ext_resource type="Texture2D" uid="uid://clpn4jbat03y6" path="res://scenes/menu/d46bbbc1-d0f1-4f4f-8b1e-40db938dd4e6 (1).png" id="4_6cq3m"]
