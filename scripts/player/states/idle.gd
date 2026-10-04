@@ -34,6 +34,7 @@ func update(_delta: float) -> void:
 func _pause_on_rest_frame() -> void:
 	if REST_FRAMES == player.sprite.frame:
 		player.sprite.pause()
+		player.velocity.x = 0.0
 		waiting_for_rest_frame = false
 
 

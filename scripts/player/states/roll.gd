@@ -20,7 +20,7 @@ func physics_update(delta: float) -> void:
 	if not player.is_on_floor():
 		transitioned.emit(self, &"fall")
 	elif direction == 0.0:
-		player.velocity = lerp(player.velocity, Vector2.ZERO, SLIDE/2*delta)
+		player.velocity = lerp(player.velocity, Vector2.ZERO, SLIDE*delta)
 		if absf(player.velocity.x) < 10.0:
 			transitioned.emit(self, &"idle")
 	player.move_and_slide()

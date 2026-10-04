@@ -7,7 +7,8 @@ var time_since_death := 0.0
 func enter(_previous_state: StringName) -> void:
 	player.velocity = Vector2.ZERO
 	time_since_death = 0.0
-	super(_previous_state)
+	player.sprite.speed_scale = 1.0
+	player.sprite.play(ANIMATION_NAME)
 
 
 func update(delta: float) -> void:
