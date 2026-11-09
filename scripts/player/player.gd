@@ -25,19 +25,6 @@ func _ready() -> void:
 func get_move_direction() -> float:
 	return Input.get_axis("move_left", "move_right")
 
-
-func apply_gravity(delta: float) -> void:
-	velocity.y = minf(velocity.y + gravity * delta, max_fall_speed)
-
-
-func accelerate_horizontal(direction: float, delta: float, control: float = 1.0) -> void:
-	velocity.x = move_toward(velocity.x, direction * max_speed, acceleration * control * delta)
-
-
-func apply_friction(delta: float) -> void:
-	velocity.x = move_toward(velocity.x, 0.0, friction * delta)
-
-
 func update_facing(direction: float) -> void:
 	if direction != 0.0:
 		facing = int(signf(direction))
